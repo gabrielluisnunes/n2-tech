@@ -2,6 +2,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './sections/Hero/Hero';
 import { Services } from './sections/Services/Services';
 import { About } from './sections/About/About';
+import { Portfolio } from './sections/Portfolio/Portfolio';
 
 import './styles/global.css';
 
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <Services />
+        <Portfolio />
         
         {/* As próximas seções entrarão aqui */}
       </main>
