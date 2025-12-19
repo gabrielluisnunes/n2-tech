@@ -1,10 +1,25 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Navbar.module.css';
 
 export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
+
   return (
     <motion.nav 
-      className={styles.navbar}
+      className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ''}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -15,18 +30,11 @@ export function Navbar() {
         </div>
         
         <ul className={styles.navLinks}>
-          <li><a href="#home">Sobre</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
-
-        {/* Botão de Mobile (Hambúrguer) */}
-        <div className={styles.mobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </motion.nav>
   );

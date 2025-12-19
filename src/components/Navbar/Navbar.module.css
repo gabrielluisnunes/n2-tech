@@ -58,4 +58,17 @@
   .mobileMenu {
     display: none;
   }
+
+  .navbar {
+  height: 90px;
+  background: rgba(5, 10, 24, 0.4);
+  transition: all 0.3s ease-in-out;
+  }
+
+.navbarScrolled {
+  height: 70px;
+  background: rgba(5, 10, 24, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--accent-blue);
+  }
 }
