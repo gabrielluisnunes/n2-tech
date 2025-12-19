@@ -1,0 +1,84 @@
+.about {
+  padding: 100px 20px;
+  background: var(--primary-bg);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  gap: 50px;
+  align-items: center;
+}
+
+.imageSide {
+  width: 100%;
+  position: relative;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.imageGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background: var(--accent-blue);
+  filter: blur(50px);
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.contentSide {
+  width: 100%;
+}
+
+.tagline {
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 20px 0;
+}
+
+.text {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.statItem h3 {
+  color: var(--accent-blue);
+  font-size: 1.8rem;
+}
+
+/* Responsividade Desktop */
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row;
+  }
+  
+  .imageSide, .contentSide {
+    width: 50%;
+  }
+}
