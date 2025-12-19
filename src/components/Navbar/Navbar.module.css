@@ -71,4 +71,54 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid var(--accent-blue);
   }
+
+  .mobileMenuBtn {
+  display: flex;
+  background: none;
+  border: none;
+  color: var(--text-white);
+  cursor: pointer;
+  z-index: 1001; /* Fica acima do overlay */
+}
+
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%; /* Menu lateral ocupa 70% da tela */
+  height: 100vh;
+  background: var(--primary-bg);
+  border-left: 1px solid var(--accent-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mobileLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.mobileLinks a {
+  text-decoration: none;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+  
+  .navLinks {
+    display: flex;
+  }
+}
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from './Services.module.css';
+import { Monitor, Cpu, Workflow, Layers } from 'lucide-react';
 
 const services = [
   { title: 'Desenvolvimento Web', desc: 'Sistemas modernos e escaláveis.' },
