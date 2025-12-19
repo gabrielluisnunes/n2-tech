@@ -1,0 +1,61 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.content {
+  text-align: center;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.title span {
+  color: var(--accent-blue);
+  text-shadow: 0 0 20px var(--glow-blue);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Efeito de Brilho no Fundo */
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--accent-blue);
+  filter: blur(150px);
+  opacity: 0.2;
+  top: 20%;
+  right: -100px;
+  z-index: 1;
+}
+
+/* Responsividade (Desktop) */
+@media (min-width: 768px) {
+  .title {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .content {
+    text-align: left;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .actions {
+    justify-content: flex-start;
+  }
+}
