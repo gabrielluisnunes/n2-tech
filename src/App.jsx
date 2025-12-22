@@ -3,8 +3,10 @@ import { Hero } from './sections/Hero/Hero';
 import { Services } from './sections/Services/Services';
 import { About } from './sections/About/About';
 import { Portfolio } from './sections/Portfolio/Portfolio';
+import { Contact } from './sections/Contact/Contact';
 
 import './styles/global.css';
+
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
         <About />
         <Services />
         <Portfolio />
-        
-        {/* As próximas seções entrarão aqui */}
+        <Contact />
+        {}
       </main>
 
       {}

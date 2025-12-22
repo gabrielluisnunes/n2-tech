@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Instagram, Linkedin, Github, Send } from 'lucide-react'; 
 import styles from './Contact.module.css';
 
 export function Contact() {
@@ -20,11 +21,17 @@ export function Contact() {
           <p className={styles.description}>
             Tem um projeto em mente? Vamos transformar sua visão em realidade tecnológica.
           </p>
+          
           <div className={styles.socialLinks}>
-            {}
-            <span>Instagram</span>
-            <span>LinkedIn</span>
-            <span>GitHub</span>
+            <a href="#" className={styles.socialItem}>
+              <Instagram size={24} /> <span>Instagram</span>
+            </a>
+            <a href="#" className={styles.socialItem}>
+              <Linkedin size={24} /> <span>LinkedIn</span>
+            </a>
+            <a href="#" className={styles.socialItem}>
+              <Github size={24} /> <span>GitHub</span>
+            </a>
           </div>
         </motion.div>
 
@@ -50,7 +57,9 @@ export function Contact() {
             <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
           </div>
 
-          <button type="submit" className={styles.submitBtn}>Enviar Mensagem</button>
+          <button type="submit" className={styles.submitBtn}>
+            Enviar Mensagem <Send size={18} style={{ marginLeft: '10px' }} />
+          </button>
         </motion.form>
       </div>
     </section>
