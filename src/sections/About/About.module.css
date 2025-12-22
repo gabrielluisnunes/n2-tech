@@ -2,10 +2,14 @@
   padding: 100px 20px;
   background: var(--primary-bg);
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column; 
@@ -15,28 +19,38 @@
 
 .imageSide {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.imagePlaceholder {
+
+.logoWrapper {
   width: 100%;
-  aspect-ratio: 16/9;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 400px; 
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.logoImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.3));
 }
 
 .imageGlow {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 100px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
   background: var(--accent-blue);
-  filter: blur(50px);
+  filter: blur(80px);
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .contentSide {
@@ -54,6 +68,7 @@
 .title {
   font-size: 2.2rem;
   margin: 20px 0;
+  line-height: 1.2;
 }
 
 .text {
@@ -69,16 +84,31 @@
 
 .statItem h3 {
   color: var(--accent-blue);
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
 }
 
 /* Responsividade Desktop */
 @media (min-width: 992px) {
   .container {
     flex-direction: row;
+    padding: 0 20px;
   }
   
   .imageSide, .contentSide {
     width: 50%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .imageSide {
+    justify-content: flex-start; 
   }
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from './About.module.css';
+import logoImg from '../../assets/N2 Tech - 2.png'; 
 
 export function About() {
   return (
@@ -12,10 +13,15 @@ export function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className={styles.imagePlaceholder}>
-            {/* Aqui você colocará a tag <img /> depois */}
+          {}
+          <motion.div 
+            className={styles.logoWrapper}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <img src={logoImg} alt="N2 TECH Logo" className={styles.logoImage} />
             <div className={styles.imageGlow}></div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div 
