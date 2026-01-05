@@ -17,7 +17,7 @@ export function Hero() {
         <p className={styles.subtitle}>
           Soluções sob medida que transformam ideias em crescimento.
         </p>
-      </motion.div>
+       </motion.div>
       
       <div className={styles.glow} />
     </section>
