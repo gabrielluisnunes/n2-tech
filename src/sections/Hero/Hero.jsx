@@ -17,10 +17,6 @@ export function Hero() {
         <p className={styles.subtitle}>
           Soluções sob medida que transformam ideias em crescimento.
         </p>
-        <div className={styles.actions}>
-          <button className={styles.primaryBtn}>Ver Serviços</button>
-          <button className={styles.secondaryBtn}>Fale Conosco</button>
-        </div>
       </motion.div>
       
       <div className={styles.glow} />

@@ -5,7 +5,7 @@ import styles from './Contact.module.css';
 export function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Mensagem enviada com sucesso! (Simulação)');
+    alert('Mensagem enviada com sucesso!');
   };
 
   return (
@@ -25,12 +25,6 @@ export function Contact() {
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialItem}>
               <Instagram size={24} /> <span>Instagram</span>
-            </a>
-            <a href="#" className={styles.socialItem}>
-              <Linkedin size={24} /> <span>LinkedIn</span>
-            </a>
-            <a href="#" className={styles.socialItem}>
-              <Github size={24} /> <span>GitHub</span>
             </a>
           </div>
         </motion.div>

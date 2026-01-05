@@ -26,7 +26,7 @@ function App() {
       <WhatsAppButton />
       {}
       <footer style={{ padding: '40px', textAlign: 'center', opacity: 0.5 }}>
-        © 2025 N2 TECH - Sua Visão, Nossa Tecnologia.
+        © N2 Tech - Sua visão, nossa tecnologia.
       </footer>
     </div>
   );
