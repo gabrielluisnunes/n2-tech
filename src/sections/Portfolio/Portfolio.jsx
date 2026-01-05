@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion';
 import styles from './Portfolio.module.css';
-
-
+import logoAtiv from '../../assets/ativ.png';
+import logoMG from '../../assets/MG.png';
+import logoPn from '../../assets/pnlogo.png';
+import logoAmerico from '../../assets/Americo Team.png';
+import logoSOS from '../../assets/SOS.png';
 
 const clients = [
-  { id: 1, name: 'Empresa Alpha', logo: 'https://via.placeholder.com/200x80?text=LOGO+1' },
-  { id: 2, name: 'Tech Solutions', logo: 'https://via.placeholder.com/200x80?text=LOGO+2' },
-  { id: 3, name: 'Global Systems', logo: 'https://via.placeholder.com/200x80?text=LOGO+3' },
-  { id: 4, name: 'Inova Corp', logo: 'https://via.placeholder.com/200x80?text=LOGO+4' },
-  { id: 5, name: 'Future Mind', logo: 'https://via.placeholder.com/200x80?text=LOGO+5' },
-  { id: 6, name: 'Digital Edge', logo: 'https://via.placeholder.com/200x80?text=LOGO+6' },
+  { id: 1, name: 'Ativ Academia', logo: logoAtiv },
+  { id: 2, name: 'MG Electric', logo: logoMG },
+  { id: 3, name: 'Pn Performance Mídia', logo: logoPn },
+  { id: 4, name: 'Americo Team BJJ', logo: logoAmerico },
+  { id: 5, name: 'SOS Diaristas', logo: logoSOS},
+  //{ id: 6, name: 'Digital Edge', logo: 'https://via.placeholder.com/200x80?text=LOGO+6' },//
 ];
 
 export function Portfolio() {
