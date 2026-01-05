@@ -1,15 +1,19 @@
 .portfolio {
   padding: 100px 20px;
   background: var(--primary-bg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+  text-align: center;
 }
 
 .tagline {
@@ -17,97 +21,82 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
+  letter-spacing: 2px;
 }
 
 .title {
   font-size: 2.5rem;
-  margin-top: 10px;
+  margin-top: 15px;
+  color: var(--text-white);
 }
 
-.grid {
+.logoGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
 }
 
-.projectCard {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.logoCard {
+  background: rgba(255, 255, 255, 0.02);
+  height: 140px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden;
-  transition: border-color 0.3s;
+  transition: all 0.4s ease;
 }
 
-.projectCard:hover {
+.clientLogo {
+  max-width: 70%;
+  max-height: 50px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.6); 
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+
+.logoCard:hover {
+  background: rgba(255, 255, 255, 0.05);
   border-color: var(--accent-blue);
 }
 
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/10;
-  overflow: hidden;
+.logoCard:hover .clientLogo {
+  filter: grayscale(0) opacity(1); 
+  transform: scale(1.1);
 }
 
-.imageWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
+.logoGlow {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 123, 255, 0.4);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-blue);
+  filter: blur(40px);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s ease;
+  z-index: 1;
 }
 
-.projectCard:hover .overlay {
-  opacity: 1;
-}
-
-.viewBtn {
-  background: var(--text-white);
-  color: var(--primary-bg);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.projectInfo {
-  padding: 25px;
-}
-
-.category {
-  color: var(--accent-blue);
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.projectInfo h3 {
-  margin-top: 5px;
-  font-size: 1.2rem;
+.logoCard:hover .logoGlow {
+  opacity: 0.2;
 }
 
 /* Responsividade */
 @media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
 }
 
 @media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  
+  .title {
+    font-size: 3rem;
   }
 }

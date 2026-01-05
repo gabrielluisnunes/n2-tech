@@ -1,25 +1,15 @@
 import { motion } from 'framer-motion';
 import styles from './Portfolio.module.css';
 
-const projects = [
-  {
-    id: 1,
-    title: 'Projeto Alpha',
-    category: 'Web Design',
-    image: 'https://via.placeholder.com/400x250', 
-  },
-  {
-    id: 2,
-    title: 'Dashboard Tech',
-    category: 'SaaS',
-    image: 'https://via.placeholder.com/400x250',
-  },
-  {
-    id: 3,
-    title: 'App Mobile',
-    category: 'Desenvolvimento',
-    image: 'https://via.placeholder.com/400x250',
-  },
+
+
+const clients = [
+  { id: 1, name: 'Empresa Alpha', logo: 'https://via.placeholder.com/200x80?text=LOGO+1' },
+  { id: 2, name: 'Tech Solutions', logo: 'https://via.placeholder.com/200x80?text=LOGO+2' },
+  { id: 3, name: 'Global Systems', logo: 'https://via.placeholder.com/200x80?text=LOGO+3' },
+  { id: 4, name: 'Inova Corp', logo: 'https://via.placeholder.com/200x80?text=LOGO+4' },
+  { id: 5, name: 'Future Mind', logo: 'https://via.placeholder.com/200x80?text=LOGO+5' },
+  { id: 6, name: 'Digital Edge', logo: 'https://via.placeholder.com/200x80?text=LOGO+6' },
 ];
 
 export function Portfolio() {
@@ -27,31 +17,23 @@ export function Portfolio() {
     <section id="portfolio" className={styles.portfolio}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <span className={styles.tagline}>Nossos Trabalhos</span>
-          <h2 className={styles.title}>Portfólio</h2>
+          <span className={styles.tagline}>Confiança & Credibilidade</span>
+          <h2 className={styles.title}>Clientes que Confiam na N2 TECH</h2>
         </header>
 
-        <div className={styles.grid}>
-          {projects.map((project) => (
+        <div className={styles.logoGrid}>
+          {clients.map((client, index) => (
             <motion.div 
-              key={project.id}
-              className={styles.projectCard}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+              key={client.id}
+              className={styles.logoCard}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className={styles.imageWrapper}>
-                <img src={project.image} alt={project.title} />
-                <div className={styles.overlay}>
-                  <button className={styles.viewBtn}>Ver Projeto</button>
-                </div>
-              </div>
-              <div className={styles.projectInfo}>
-                <span className={styles.category}>{project.category}</span>
-                <h3>{project.title}</h3>
-              </div>
+              <img src={client.logo} alt={client.name} className={styles.clientLogo} />
+              <div className={styles.logoGlow}></div>
             </motion.div>
           ))}
         </div>
