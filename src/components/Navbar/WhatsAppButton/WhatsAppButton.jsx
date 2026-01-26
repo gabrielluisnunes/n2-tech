@@ -3,7 +3,8 @@ import { MessageCircle } from 'lucide-react';
 import styles from './WhatsAppButton.module.css';
 
 export function WhatsAppButton() {
-  const phoneNumber = "5511999999999"; // Coloque seu número aqui (com DDD)
+  // Número atualizado conforme sua solicitação: (45) 99133-9633
+  const phoneNumber = "5545991339633"; 
   const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da N2 TECH.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -22,7 +23,11 @@ export function WhatsAppButton() {
       <motion.div
         className={styles.pulse}
         animate={{ scale: [1, 1.4, 1], opacity: [0.5, 0, 0.5] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ 
+          duration: 2, 
+          repeat: Infinity,
+          ease: "easeInOut" 
+        }}
       />
       <MessageCircle size={30} fill="currentColor" />
     </motion.a>
