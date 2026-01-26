@@ -11,11 +11,11 @@ export function Hero() {
         transition={{ duration: 0.8 }}
       >
         <h1 className={styles.title}>
-          Sua Visão, <br />
-          <span>Nossa Tecnologia.</span>
+          Transformamos ideias em, <br />
+          <span>Soluções digitais que geram resultado.</span>
         </h1>
         <p className={styles.subtitle}>
-          Soluções sob medida que transformam ideias em crescimento.
+          Marketing digital, desenvolvimento e automação para empresas.
         </p>
        </motion.div>
       

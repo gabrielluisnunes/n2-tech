@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import styles from './Services.module.css';
-import { Monitor, Cpu, Workflow, Layers } from 'lucide-react';
+import { Monitor, Cpu, Workflow, Layers, MousePointerClick, Palette, Users, MapPin } from 'lucide-react';
 
 const services = [
   { 
     title: 'Desenvolvimento Web', 
-    desc: 'Sistemas modernos e escaláveis.', 
+    desc: 'Sites modernos e escaláveis.', 
     icon: <Monitor size={32} /> 
   },
   { 
-    title: 'Sistemas Personalizados', 
-    desc: 'Soluções focadas no seu negócio.', 
-    icon: <Cpu size={32} /> 
+    title: 'Criação de Criativos', 
+    desc: 'Designs criativos para marketing digital.', 
+    icon: <Palette size={32} /> 
   },
   { 
     title: 'Automação & Integração', 
@@ -19,9 +19,15 @@ const services = [
     icon: <Workflow size={32} /> 
   },
   { 
-    title: 'Soluções SaaS', 
-    desc: 'Sua ideia transformada em produto.', 
-    icon: <Layers size={32} /> 
+    title: 'Social Media Management', 
+    desc: 'Gestão de redes sociais para sua marca.', 
+    icon: <Users size={32} /> 
+  },
+
+  { 
+    title: 'Google meu Negócio', 
+    desc: 'Otimização e gestão do perfil para aumentar visibilidade local, credibilidade e geração de contatos.', 
+    icon: <MapPin size={32} /> 
   },
 ];
 

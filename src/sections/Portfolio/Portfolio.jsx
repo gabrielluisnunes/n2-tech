@@ -12,7 +12,7 @@ const clients = [
   { id: 3, name: 'Pn Performance Mídia', logo: logoPn },
   { id: 4, name: 'Americo Team BJJ', logo: logoAmerico },
   { id: 5, name: 'SOS Diaristas', logo: logoSOS},
-  //{ id: 6, name: 'Digital Edge', logo: 'https://via.placeholder.com/200x80?text=LOGO+6' },//
+
 ];
 
 export function Portfolio() {

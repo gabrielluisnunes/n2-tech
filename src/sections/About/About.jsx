@@ -34,14 +34,14 @@ export function About() {
           <span className={styles.tagline}>Sobre Nós</span>
           <h2 className={styles.title}>Liderando a Inovação Digital</h2>
           <p className={styles.text}>
-            Na N2 TECH, não apenas construímos softwares; criamos pontes entre 
-            grandes ideias e resultados extraordinários. Nossa equipe é focada 
-            em entregar tecnologia de ponta com design centrado no usuário.
+           A N2 Tech é uma empresa de marketing digital e desenvolvimento focada em transformar estratégia em execução.
+
+Atuamos ajudando empresas e agências a estruturarem, otimizarem e escalarem suas operações digitais por meio de soluções práticas, eficientes e orientadas a resultado. Nosso trabalho une marketing, tecnologia e automação para resolver problemas reais do negócio e gerar crescimento consistente.
           </p>
           
           <div className={styles.stats}>
             <div className={styles.statItem}>
-              <h3>50+</h3>
+              <h3>30+</h3>
               <p>Projetos</p>
             </div>
             <div className={styles.statItem}>
